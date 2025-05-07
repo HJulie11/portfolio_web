@@ -28,7 +28,6 @@ const Skills = () => {
                 <Image
                     src = {mujoco_logo}
                     alt = "MuJoCo"
-                    width={50}
                     height={50}
 
                 />
@@ -38,7 +37,6 @@ const Skills = () => {
                 <Image
                     src = {python_logo}
                     alt = "Python"
-                    width={50}
                     height={50}
                 />
                 <p className='text-sm mt-5'>Python</p>
@@ -47,7 +45,6 @@ const Skills = () => {
                 <Image
                     src = {cpp_logo}
                     alt = "C++"
-                    width={50}
                     height={50}
                 />
                 <p className='text-sm mt-5'>C++</p>
@@ -56,34 +53,56 @@ const Skills = () => {
                 <Image
                     src = {java_logo}
                     alt = "Java"
-                    width={50}
                     height={50}
                 />
                 <p className='text-sm mt-5'>Java</p>
             </div>
             <div className='flex flex-col items-center justify-center mr-5'>
                 <Image
-                    src = {git_logo}
-                    alt = "Git"
-                    width={50}
-                    height={50}
-                />
-                <p className='text-sm mt-5'>Git</p>
-            </div>
-            <div className='flex flex-col items-center justify-center mr-5'>
-                <Image
                     src = {ros2_logo}
                     alt = "ROS2"
-                    width={50}
                     height={50}
                 />
                 <p className='text-sm mt-5'>ROS2</p>
             </div>
             <div className='flex flex-col items-center justify-center mr-5'>
                 <Image
+                    src = {pytorch_logo}
+                    alt = "PyTorch"
+                    height={50}
+                />
+                <p className='text-sm mt-5'>PyTorch</p>
+            </div>
+            <div className='flex flex-col items-center justify-center mr-5'>
+                <Image
+                    src = {react_logo}
+                    alt = "React"
+                    height={50}
+                />
+                <p className='text-sm mt-5'>React</p>
+            </div>
+            <div className='flex flex-col items-center justify-center'>
+                <Image
+                    src = {html_css_js_logo}
+                    alt = "html/css/js"
+                    height={50}
+                />
+                <p className='text-sm mt-5'>Web Dev</p>
+            </div>
+        </div>
+        <div className='flex flex-row items-center justify-center mb-5'>
+            <div className='flex flex-col items-center justify-center mr-5'>
+                <Image
+                    src = {git_logo}
+                    alt = "Git"
+                    height={50}
+                />
+                <p className='text-sm mt-5'>Git</p>
+            </div>
+            <div className='flex flex-col items-center justify-center mr-5'>
+                <Image
                     src = {mongodb_logo}
                     alt = "MongoDB"
-                    width={50}
                     height={50}
                 />
                 <p className='text-sm mt-5'>MongoDB</p>
@@ -92,11 +111,50 @@ const Skills = () => {
                 <Image
                     src = {docker_logo}
                     alt = "Docker"
-                    width={50}
                     height={50}
                 />
                 <p className='text-sm mt-5'>Docker</p>
             </div>
+            <div className='flex flex-col items-center justify-center mr-5'>
+                <Image
+                    src = {aws_s3_logo}
+                    alt = "AWS S3"
+                    height={50}
+                />
+                <p className='text-sm mt-5'>AWS S3</p>
+            </div>
+            <div className='flex flex-col items-center justify-center mr-5'>
+                <Image
+                    src = {blender_logo}
+                    alt = "Blender"
+                    height={50}
+                />
+                <p className='text-sm mt-5'>Blender</p>
+            </div>
+            <div className='flex flex-col items-center justify-center mr-5'>
+                <Image
+                    src = {fusion_360}
+                    alt = "Fusion 360"
+                    height={50}
+                />
+                <p className='text-sm mt-5'>Fusion 360</p>
+            </div>
+            <div className='flex flex-col items-center justify-center mr-5'>
+                <Image
+                    src = {figma_logo}
+                    alt = "Figma"
+                    height={50}
+                />
+                <p className='text-sm mt-5'>Figma</p>
+            </div>
+            <div className='flex flex-col items-center justify-center'>
+                <Image
+                    src = {vercel_logo}
+                    alt = "Vercel"
+                    height={50}
+                />
+                <p className='text-sm mt-5'>Vercel</p>
+            </div> 
         </div>
     </div>
   )
