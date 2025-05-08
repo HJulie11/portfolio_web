@@ -13,7 +13,7 @@ const StartScreen = () => {
                         Hi, I&apos;m Seojin!
                     </p>
                     <p className='text-[20px] text-gray-400 mt-5'>
-                        I'm a Final Year Computer Science student with a strong background in coding and passion for AI and Robotics. I am looking myself to become
+                        I&apos;m a Final Year Computer Science student with a strong background in coding and passion for AI and Robotics. I am looking myself to become
                     </p>
                     <p className='text-[20px] text-green-100 font-bold mb-5'>
                         <Typewriter
