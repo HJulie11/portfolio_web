@@ -2,22 +2,26 @@
     {
         "name": "Drone-based Pizza delivery service",
         "display_name": "PizzaDronz",
-        "description": "Developed backend of drone-based food delivery system using RESTful API"
+        "description": "Developed backend of drone-based food delivery system using RESTful API",
+        "tech_stack": "Java, RESTful API, Figma"
     },
     {
         "name": "[ARO] MP and Dynamics",
         "display_name": "Dual-Arm Manipulation",
-        "description": "Coordinated Dual-Arm Manipulation for Object Transport Using the Nextage Robot project. experiment and develop motion planning and dynamics controlling computational framework for a robot manipulation (grabing cube)."
+        "description": "Coordinated Dual-Arm Manipulation for Object Transport Using the Nextage Robot project. experiment and develop motion planning and dynamics controlling computational framework for a robot manipulation (grabing cube).",
+        "tech_stack": "Python, PyBullet, MeshCat"
     },
     {
         "name": "RecyclED",
         "display_name": "RecyclED",
-        "description": "System design project. Developed an autonomous recycling bin that sorts rubbish into right correct category (General or Recyclable)"
+        "description": "System design project. Developed an autonomous recycling bin that sorts rubbish into right correct category (General or Recyclable)",
+        "tech_stack": "Next.js, Tailwind CSS, Python Flask, Python, Fusion 360, Raspberry Pi, Arduino"
     },
     {
         "name": "Robotics Project",
         "display_name": "Challenging Dexterity of Robot Manipulation in Piano-Playing Environment",
-        "description": "Experimental research project. Developed a robot manipulation system to prove importance of tackling fundamental problems in robotics to challenge dexterity of robot manipulation."
+        "description": "Experimental research project. Developed a robot manipulation system to prove importance of tackling fundamental problems in robotics to challenge dexterity of robot manipulation.",
+        "tech_stack": "Python, MuJoCo"
     }
 
   ]

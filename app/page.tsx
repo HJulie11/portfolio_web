@@ -89,48 +89,40 @@ export default function Home() {
 
   return (
     <div id="root">
-      <div className="w-full">
-        {/* <div className="w-full bg-gradient-to-b absolute z-0"> */}
+      <div className="flex flex-col w-full h-full overflow-y-scroll scroll-smooth snap-y snap-mandatory">
+        <div className="w-full snap-start h-screen" id="startscene">
           <Header />
-        {/* </div> */}
-      </div>
-      <div className="flex flex-row w-full h-full">
-        <div className='h-full flex w-[20%] items-center justify-center'>
-          <ScrollIndicator sections={sections} />
+          <StartScreen />
         </div>
-        <div className="w-full h-full overflow-y-scroll scroll-smooth">
-          <div className="w-full h-full" id="startscene">
-            <StartScreen />
-          </div>
-          <div className="w-full h-full flex items-center" id="Skills">
-            <Skills />
-          </div>
-          {/* Projects cards goes here */}
-          <div className='w-full h-full flex flex-col items-center justify-center' id="Projects">
-            <h2 className='w-full text-2xl font-bold text-green-100 mb-10 items-start justify-center'>Projects</h2>
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'> 
-              {projects.map((project) => (
-                <div key={project.name} className="mb-6">
-                  <ProjectCard
-                    name={project.name}
-                    description={project.description}
-                    html_url={project.html_url}
-                    homepage={project.homepage}
-                  />
-                </div>
-              ))}
-            </div>
-            {/* grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4'> */}
-          </div>
-          <div className='w-full h-[50%] py-[5%] flex flex-col items-center justify-center' id="Contact">
-            <Contact />
-          </div>
-          <div className='w-full py-[5%] flex flex-col items-center justify-center'>
-            <Footer />
+  
+        <div className="w-full flex items-center" id="Skills">
+          <Skills />
+        </div>
+  
+        <div className="w-full snap-start h-screen flex flex-col items-center justify-center" id="Projects">
+          <h2 className='w-full text-2xl font-bold text-green-100 mb-10'>Projects</h2>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-y-auto'>
+            {projects.map((project) => (
+              <div key={project.name} className="mb-6">
+                <ProjectCard
+                  name={project.name}
+                  description={project.description}
+                  html_url={project.html_url}
+                  homepage={project.homepage}
+                />
+              </div>
+            ))}
           </div>
         </div>
+  
+        <div className="w-full snap-start h-screen flex flex-col items-center justify-center" id="Contact">
+          <Contact />
+        </div>
+  
+        <div className="w-full snap-start h-screen flex flex-col items-center justify-center">
+          <Footer />
+        </div>
       </div>
-      {/* <ThreeScene /> */}
     </div>
-  );
+  );  
 }

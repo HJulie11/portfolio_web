@@ -21,7 +21,7 @@ import vercel_logo from '@/public/logos/vercel.png'
 
 const Skills = () => {
   return (
-    <div className='w-full flex flex-col items-center justify-center'>
+    <div className='w-full h-screen flex flex-col items-center'>
         <h2 className='w-full text-2xl font-bold text-green-100 mb-10 items-start justify-center'>Skills</h2>
         <div className='flex flex-row items-center justify-center mb-5'>
             <div className='flex flex-col items-center justify-center mr-5'>
