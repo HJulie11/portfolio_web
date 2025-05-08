@@ -1,14 +1,23 @@
-// app/api/projects/route.ts
 export async function GET() {
-    const headers = {
-      Authorization: `token ${process.env.GITHUB_TOKEN}`,
-    };
+    const token = process.env.GITHUB_TOKEN;
+  
+    if (!token) {
+      return new Response("Missing token", { status: 500 });
+    }
   
     const res = await fetch("https://api.github.com/repos/HJulie11/Projects_Julie/contents", {
-      headers,
+      headers: {
+        Authorization: `token ${token}`, // Or try `Bearer ${token}`
+      },
     });
   
-    const folders = await res.json();
-    return Response.json(folders);
+    const data = await res.text();
+  
+    if (!res.ok) {
+      console.error("GitHub API error:", res.status, data);
+      return new Response(data, { status: res.status });
+    }
+  
+    return new Response(data, { status: 200 });
   }
   
