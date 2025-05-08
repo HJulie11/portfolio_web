@@ -28,9 +28,9 @@ interface Project {
 
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
-  const headers = {
-    Authorization: `token ${process.env.GITHUB_TOKEN}`,
-  };
+  // const headers = {
+  //   Authorization: `token ${process.env.GITHUB_TOKEN}`,
+  // };
 
   useEffect(() => {
     const fetchProjects = async () => {
