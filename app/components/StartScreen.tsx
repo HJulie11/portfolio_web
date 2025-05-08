@@ -15,7 +15,7 @@ const StartScreen = () => {
                     <p className='text-[20px] text-gray-400 mt-5'>
                         I&apos;m a Final Year Computer Science student with a strong background in coding and passion for AI and Robotics. I am looking myself to become
                     </p>
-                    <p className='text-[20px] text-green-100 font-bold mb-5'>
+                    <div className='text-[20px] text-green-100 font-bold mb-5'>
                         <Typewriter
                             onInit={(typewriter) => {
                                 const phrases = [
@@ -40,7 +40,7 @@ const StartScreen = () => {
                                 typewriter.start();
                             }}
                         />
-                    </p>
+                    </div>
                 </div>
                 <div className='flex items-center justify-center profile-memoji bg-green-100 rounded-full w-[40%]'>
                     <div className='w-[40%] h-auto flex items-center justify-center'>

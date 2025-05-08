@@ -35,9 +35,10 @@ export default function Home() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch(
-          "https://api.github.com/repos/HJulie11/Projects_Julie/contents", { headers }
-        );
+        // const res = await fetch(
+        //   "https://api.github.com/repos/HJulie11/Projects_Julie/contents", { headers }
+        // );
+        const res = await fetch("/api/projects");
     
         if (!res.ok) {
           const errorBody = await res.text();
@@ -45,6 +46,7 @@ export default function Home() {
           return;
         }
     
+        // const folders = await res.json();
         const folders = await res.json();
     
         if (!Array.isArray(folders)) {
