@@ -6,12 +6,15 @@ import StartScreen from "./components/StartScreen";
 import { ScrollIndicator } from "./components/ScrollIndicator";
 import Skills from "./components/Skills";
 import ProjectCard from './components/ProjectCard';
+import customDescription from '@/customProject.json';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const sections = [
   { id: 'startscene', name: 'Home' },
   { id: 'Skills', name: 'Skills' },
   { id: 'Projects', name: 'Projects' },
-  { id: 'section4', name: 'Contact' }
+  { id: 'Contact', name: 'Contact' }
 ]
 
 interface Project {
@@ -45,33 +48,36 @@ export default function Home() {
           return;
         }
     
-        const projectFolders = folders.filter((item) => item.type === "dir");
+        // const projectFolders = folders.filter((item) => item.type === "dir");
+        const whitelist = customDescription.map(p => p.name);
+        const projectFolders = folders.filter((item) => item.type === "dir" && whitelist.includes(item.name)); 
     
         const projectData = await Promise.all(
           projectFolders.map(async (folder) => {
             try {
-              return await (async () => {
-                const readmeRes = await fetch(
-                  `https://api.github.com/repos/HJulie11/Projects_Julie/contents/${folder.name}/README.md`
-                );
-      
-                const readme = await readmeRes.json();
-                const description = atob(readme.content || "");
-      
-                return {
-                  id: Math.random(), // Generate a unique ID
-                  name: folder.name,
-                  description,
-                  html_url: `https://github.com/HJulie11/Projects_Julie/tree/main/${folder.name}`, // Construct a GitHub URL
-                };
-              })();
+              const readmeRes = await fetch(
+                `https://api.github.com/repos/HJulie11/Projects_Julie/contents/${folder.name}/README.md`
+              );
+        
+              const readme = await readmeRes.json();
+              const fallbackDescription = atob(readme.content || "");
+        
+              // Look up this folder in the custom description list
+              const custom = customDescription.find(p => p.name === folder.name);
+        
+              return {
+                id: Math.random(),
+                name: custom?.display_name || folder.name,          // ← Custom display name
+                description: custom?.description || fallbackDescription, // ← Custom description
+                html_url: `https://github.com/HJulie11/Projects_Julie/tree/main/${folder.name}`,
+              };
             } catch (error) {
               console.error("Error fetching README for folder:", folder.name, error);
               return null;
             }
-          }).filter(Boolean)
-        );
-    
+          })
+        );        
+        
         setProjects(projectData.filter((project): project is Project => project !== null));
       } catch (err) {
         console.error("Error fetching projects:", err);
@@ -96,7 +102,7 @@ export default function Home() {
           <div className="w-full h-full" id="startscene">
             <StartScreen />
           </div>
-          <div className="w-full h-full" id="Skills">
+          <div className="w-full h-full flex items-center" id="Skills">
             <Skills />
           </div>
           {/* Projects cards goes here */}
@@ -115,6 +121,12 @@ export default function Home() {
               ))}
             </div>
             {/* grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4'> */}
+          </div>
+          <div className='w-full h-[50%] py-[5%] flex flex-col items-center justify-center' id="Contact">
+            <Contact />
+          </div>
+          <div className='w-full py-[5%] flex flex-col items-center justify-center'>
+            <Footer />
           </div>
         </div>
       </div>

@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Drone-based Pizza delivery service",
+        "display_name": "PizzaDronz",
+        "description": "Developed backend of drone-based food delivery system using RESTful API"
+    },
+    {
+        "name": "[ARO] MP and Dynamics",
+        "display_name": "Dual-Arm Manipulation",
+        "description": "Coordinated Dual-Arm Manipulation for Object Transport Using the Nextage Robot project. experiment and develop motion planning and dynamics controlling computational framework for a robot manipulation (grabing cube)."
+    },
+    {
+        "name": "RecyclED",
+        "display_name": "RecyclED",
+        "description": "System design project. Developed an autonomous recycling bin that sorts rubbish into right correct category (General or Recyclable)"
+    },
+    {
+        "name": "Robotics Project",
+        "display_name": "Challenging Dexterity of Robot Manipulation in Piano-Playing Environment",
+        "description": "Experimental research project. Developed a robot manipulation system to prove importance of tackling fundamental problems in robotics to challenge dexterity of robot manipulation."
+    }
+
+  ]
