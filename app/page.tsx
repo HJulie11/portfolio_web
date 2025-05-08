@@ -9,6 +9,7 @@ import ProjectCard from './components/ProjectCard';
 import customDescription from '@/customProject.json';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { headers } from 'next/headers';
 
 // const sections = [
 //   { id: 'startscene', name: 'Home' },
@@ -32,7 +33,10 @@ export default function Home() {
     const fetchProjects = async () => {
       try {
         const res = await fetch(
-          "https://api.github.com/repos/HJulie11/Projects_Julie/contents"
+          "https://api.github.com/repos/HJulie11/Projects_Julie/contents", {
+          headers: {
+            Authorization: `token ${process.env.GITHIB_TOKEN}`,
+          }}
         );
     
         if (!res.ok) {
