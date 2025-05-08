@@ -10,7 +10,7 @@ const StartScreen = () => {
             <div className='flex flex-row w-full h-full items-center justify-end'>
                 <div className='flex flex-col w-[60%] h-full justify-center pl-5 pr-20 pt-5 pb-5'>
                     <p className='font-bold text-[50px]'>
-                        Hi, I'm Seojin!
+                        Hi, I&apos;m Seojin!
                     </p>
                     <p className='text-[20px] text-gray-400 mt-5'>
                         I'm a Final Year Computer Science student with a strong background in coding and passion for AI and Robotics. I am looking myself to become
