@@ -26,7 +26,7 @@ const StartScreen = () => {
                                 ];
 
                                 const loop = () => {
-                                phrases.forEach((phrase, index) => {
+                                phrases.forEach((phrase) => {
                                     typewriter
                                     .typeString(phrase)
                                     .pauseFor(20)

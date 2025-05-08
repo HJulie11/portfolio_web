@@ -1,21 +1,21 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import ThreeScene from "./components/ThreeScene";
+// import ThreeScene from "./components/ThreeScene";
 import Header from "./components/Header";
 import StartScreen from "./components/StartScreen";
-import { ScrollIndicator } from "./components/ScrollIndicator";
+// import { ScrollIndicator } from "./components/ScrollIndicator";
 import Skills from "./components/Skills";
 import ProjectCard from './components/ProjectCard';
 import customDescription from '@/customProject.json';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-const sections = [
-  { id: 'startscene', name: 'Home' },
-  { id: 'Skills', name: 'Skills' },
-  { id: 'Projects', name: 'Projects' },
-  { id: 'Contact', name: 'Contact' }
-]
+// const sections = [
+//   { id: 'startscene', name: 'Home' },
+//   { id: 'Skills', name: 'Skills' },
+//   { id: 'Projects', name: 'Projects' },
+//   { id: 'Contact', name: 'Contact' }
+// ]
 
 interface Project {
   id: number;
