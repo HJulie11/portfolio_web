@@ -28,15 +28,15 @@ interface Project {
 
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
+  const headers = {
+    Authorization: `token ${process.env.GITHUB_TOKEN}`,
+  };
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         const res = await fetch(
-          "https://api.github.com/repos/HJulie11/Projects_Julie/contents", {
-          headers: {
-            Authorization: `token ${process.env.GITHIB_TOKEN}`,
-          }}
+          "https://api.github.com/repos/HJulie11/Projects_Julie/contents", { headers }
         );
     
         if (!res.ok) {
